@@ -10,21 +10,20 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   font-family: 'Roboto', sans-serif;
   color: var(--black);
   background: linear-gradient(120deg, var(--gray), var(--blue), var(--purple), var(--yellow), var(--red));
   background-size: 500% 500%;
   animation: animatedBackground 10s ease infinite;
-  overflow-x: hidden; /* Evita desplazamiento horizontal */
 }
 
 .container {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 1rem;
-  box-sizing: border-box;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 @keyframes animatedBackground {
@@ -65,16 +64,6 @@ main {
 }
 
 /* Tabla estilo Material Design 3 */
-.responsive-table {
-  overflow-x: auto;
-  width: 100%;
-}
-
-.responsive-table table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 600px; /* Opcional para evitar columnas demasiado pequeñas */
-}
 .md3-table {
   width: 100%;
   border-collapse: separate;
@@ -83,8 +72,10 @@ main {
   border: 2px solid var(--red);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  table-layout: fixed; /* Forza columnas iguales */
+  word-break: break-word; /* Ajusta texto largo */
 }
 
 /* Efecto sutil al pasar el mouse sobre la tabla */
@@ -103,6 +94,7 @@ main {
   padding: 0.75rem 1rem;
   font-size: 0.95rem;
   border-bottom: 1px solid #eee;
+  overflow-wrap: break-word; /* Asegura que el texto se divida */
 }
 
 .md3-table th {
@@ -113,6 +105,16 @@ main {
   letter-spacing: 0.5px;
   padding: 0.9rem 1.2rem;
   border-bottom: 1px solid #ddd;
+}
+
+/* Establece anchos máximos a columnas específicas si es necesario */
+.md3-table th:nth-child(1),
+.md3-table td:nth-child(1) {
+  width: 20%;
+}
+.md3-table th:nth-child(2),
+.md3-table td:nth-child(2) {
+  width: 30%;
 }
 
 /* Encabezado más destacado */
@@ -221,33 +223,31 @@ footer {
   margin-top: 3rem;
 }
 
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  background-color: #6200ea;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.actions button:hover {
+  background-color: #3700b3;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
-  header, main, footer {
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .game-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .game-card img {
+  .md3-table {
     width: 100%;
-    height: auto;
-  }
-
-  .social-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .formulario-contacto {
-    padding: 1rem;
-    width: 90%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
