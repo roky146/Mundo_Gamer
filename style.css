@@ -10,11 +10,21 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
   color: var(--black);
   background: linear-gradient(120deg, var(--gray), var(--blue), var(--purple), var(--yellow), var(--red));
   background-size: 500% 500%;
   animation: animatedBackground 10s ease infinite;
+  overflow-x: hidden; /* Evita desplazamiento horizontal */
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 @keyframes animatedBackground {
@@ -55,6 +65,16 @@ main {
 }
 
 /* Tabla estilo Material Design 3 */
+.responsive-table {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.responsive-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Opcional para evitar columnas demasiado pequeñas */
+}
 .md3-table {
   width: 100%;
   border-collapse: separate;
@@ -199,4 +219,35 @@ footer {
   background-color: var(--black);
   color: var(--white);
   margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  header, main, footer {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .game-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .game-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulario-contacto {
+    padding: 1rem;
+    width: 90%;
+  }
 }
