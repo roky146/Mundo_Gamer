@@ -36,6 +36,8 @@ mundo-gamer/
 
 ├── index.html
 
+├── favicon.ico
+
 ├── noticias.html
 
 ├── contacto.html
