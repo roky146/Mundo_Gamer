@@ -33,11 +33,10 @@ Se aplicaron los siguientes elementos requeridos por el mandato del proyecto:
 mundo-gamer/
 
 ├── /img
-
 ├── index.html
-
+├── noticias.html
+├── contacto.html
 ├── style.css
-
 └── README.md
 
 
