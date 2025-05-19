@@ -1,0 +1,78 @@
+<!-- contacto.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Gamer | Contacto</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    body {
+      background-color: var(--black);
+      color: var(--white);
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="md-header">
+    <h1>Contacto</h1>
+    <p>¡Conéctate con nosotros y forma parte de la comunidad!</p>
+  </header>
+
+  <nav class="md-navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main class="md-content">
+    <section class="md-profile">
+      <img src="img/yo.jpg" alt="Foto del creador" class="profile-pic">
+      <h2>Marcos Rodríguez Merlo - Creador de Mundo Gamer</h2>
+      <p>Desarrollador web y entusiasta del gaming, creando espacios digitales para compartir lo mejor del universo de los videojuegos y más.</p>
+    </section>
+
+        <!-- Formulario de contacto -->
+        <section>
+              
+            <h2>📬 Contáctanos</h2>
+            <div class="md-social-buttons">
+                <a href="https://wa.me/18295870648" target="_blank" class="btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.facebook.com/imarcos22" target="_blank" class="btn-facebook">
+                  <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="http://discordapp.com/users/japanesejohnwick" target="_blank" class="btn-discord">
+                  <i class="fab fa-discord"></i> Discord
+                </a>
+              </div>                           
+<br><br>              
+            <form class="contact-form">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required />
+      
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="email" required />
+      
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      
+              <button type="submit">Enviar mensaje</button>
+            </form>
+          </section>
+  </main>
+
+  <footer>
+    <hr />
+    <p>&copy; 2025 Mundo Gamer</p>
+    <p>Creado por <strong>Marcos Rodríguez Merlo</strong> como parte de la tarea <em>"Mi primera página web usando HTML"</em> para <strong>TEOREMA / INFOTEP</strong>. Catedrático: <strong>Angel Arnaldo Rodríguez del Pozo<strong></p>
+  </footer>
+</body>
+</html>
